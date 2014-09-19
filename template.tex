@@ -1,0 +1,63 @@
+\documentclass[a4paper]{article}
+\usepackage{fancyhdr} % Required to make the custom header and footer
+\usepackage{lastpage} % Required to determine the last page for the footer
+
+%%%%%%%%%% MODIFY THE FOLLOWING WITH YOUR INFORMATION %%%%%%%%%%
+
+%Names of students (If only one, put a '~' as the second name
+\newcommand{\firstStudent}{Cammarata Davide}
+\newcommand{\secondStudent}{Pennati Lucas}
+
+%Subjec's name
+\newcommand{\subjectName}{Discrete Mathematics}
+%Current semester
+\newcommand{\semester}{Fall 2014}
+%Date (put '\today' for current date)
+\newcommand{\theDate}{\today}
+%Title of the document (i.e. Assignment 1)
+\title{\huge Assignment 1}
+%%%%%%%%%%%%%%%%%%%%%% END %%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%\usepackage{showframe}
+
+%---------------------- Custom Commands ----------------------
+\newcommand{\question}[1]{
+\section*{Question #1 }
+}
+
+
+
+%---------------------- Layout Setup ----------------------
+%Names
+\fancyhead[L]{\firstStudent\\\secondStudent}
+%Subject name
+\fancyhead[C]{\subjectName\\\semester}
+%Date (Leave as is for today's date)
+\fancyhead[R]{\theDate\\USI Lugano}
+% Footer
+\fancyfoot[C]{Page\ \thepage\ of\ \pageref{LastPage}}
+%Height of the line separating Header and main content
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+%Hide the date from the maketitle command
+\date{\vspace{-5ex}}
+%Custom margins
+\usepackage[margin=35mm]{geometry}
+
+
+\pagestyle{fancy}
+\makeatletter
+\let\ps@plain\ps@fancy 
+\makeatother
+
+\begin{document}
+
+\maketitle
+\vspace{-10mm}
+
+\question{1}
+
+
+\end{document}
